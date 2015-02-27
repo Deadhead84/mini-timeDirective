@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html ng-app="leApp">
 <head>
-	<title></title>
+	<title>myApp</title>
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="app/style.css">
 </head>
 <body ng-controller="MainController">
-	<h1>{{welcome}}</h1>
+	<!-- <h1>{{welcome}}</h1> -->
+	<navbar></navbar>
 
-	<the-time></the-time>
+	<ng-view></ng-view>
+	<div class="container">
+	  <div dom-button class="btn btn-lg btn-info">
+	  	<span class="glyphicon glyphicon-remove"></span>
+	  </div>
+	</div>
+	
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
 <script src="app/app.js"></script>
 <script src="app/mainController.js"></script>
 <script src="app/time/time.js"></script>
+<script src="app/friends/friendsController.js"></script>
+<script src="app/nav/navbar.js"></script>
+<script src="app/button/button.js"></script>
 </body>
 </html>
